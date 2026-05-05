@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body>
+    <header><h1>DICE</h1></header>
+
+    <main>
+      <div id="reglog">
+        <form action="" method="post">
+          <div id="username" class="innerDiv">
+            <label class="forUser" for="username-input">Username:</label>
+            <input
+              type="text"
+              id="username-input"
+              minlength="6"
+              maxlength="15"
+              required
+            />
+          </div>
+
+          <br/>
+          <div id="password" class="innerDiv">
+            <label class="forUser" for="password-input">Password: </label>
+            <input
+              id="password-input"
+              type="password"
+              minlength="8"
+              maxlength="20"
+              required
+            />
+          </div>
+        </form>
+
+        <button type="submit" id="submitButton">Submit</button>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
