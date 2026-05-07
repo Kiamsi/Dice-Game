@@ -16,10 +16,14 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<UserDto> register(@RequestBody UserDto userDto)
+    public ResponseEntity<?> register(@RequestBody UserDto userDto)
     {
-        userService.register(userDto);
-        return ResponseEntity.status(201).body(userDto);
+        try {
+            userService.register(userDto);
+            return ResponseEntity.status(201).body(userDto);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(409).body(e.getMessage());
+        }
 
     }
 

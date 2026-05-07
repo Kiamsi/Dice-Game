@@ -19,6 +19,13 @@ public class UserService {
     private final JwtService jwtService;
 
     public UserDto register (UserDto request){
+
+        if (userRepository.findByUsername(request.getUsername()).isPresent()) {
+            throw new RuntimeException(
+                    "Username already exists, pick something unique man."
+            );
+        }
+
         UserEntity user = UserEntity.builder()
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
