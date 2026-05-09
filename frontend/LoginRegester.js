@@ -4,11 +4,9 @@ const registerButton = document.getElementById("registerButton");
 const loginButton = document.getElementById("loginButton");
 
 registerButton.addEventListener("click", (e)=>{
-    e.preventDefault();
     register(userName.value, password.value);
 });
 loginButton.addEventListener("click", (e)=>{
-    e.preventDefault();
     if(login(userName.value, password.value)){
         window.location.href = "../Main Page/main.html"
     }
