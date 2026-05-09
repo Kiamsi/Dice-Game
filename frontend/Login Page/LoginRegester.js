@@ -10,7 +10,7 @@ registerButton.addEventListener("click", (e)=>{
 loginButton.addEventListener("click", (e)=>{
     e.preventDefault;
     if(login(userName.value, password.value)){
-        
+        window.location.href = "../Main Page/main.html"
     }
 });
 
@@ -25,7 +25,6 @@ function register(username, password){
     })
     .then((res)=>{
         console.log(res);
-        
         if (res.status >= 300) {
             throw new Error(res.statusText);
         }
