@@ -4,7 +4,7 @@ const registerButton = document.getElementById("registerButton");
 const loginButton = document.getElementById("loginButton");
 
 registerButton.addEventListener("click", (e)=>{
-    e.preventDefault;
+    e.preventDefault();
     register(userName.value, password.value);
 });
 loginButton.addEventListener("click", (e)=>{
