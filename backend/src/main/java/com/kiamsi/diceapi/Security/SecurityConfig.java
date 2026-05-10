@@ -47,7 +47,7 @@ public class SecurityConfig {
         config.setAllowedOrigins(List.of(
                 "http://127.0.0.1:5500", 
                 "http://localhost:5500",
-                "https://symphonious-phoenix-360376.netlify.app"
+                "https://stairroll.netlify.app"
         ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
